@@ -9,6 +9,12 @@
   </div>
 
   <div id="cards" class="min-w-full">
-    <%= render @cards %>
+    <% if @cards.length > 0 %>
+      <% @cards.each do |card| %>
+        <%= render 'minimal_card', card: card %>
+      <% end %>
+    <% else %>
+      <p style="color: green">No pods were found</p>
+    <% end %>
   </div>
 </div>

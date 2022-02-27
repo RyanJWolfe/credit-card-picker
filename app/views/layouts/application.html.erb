@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CreditCardPicker</title>
+    <title>CC Shuffle</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,12 +12,16 @@
   </head>
 
   <body>
-    <div class="flex flex-col h-screen justify-between">
-      <%= render 'layouts/navbar' %>
-      <main class="container mx-auto mt-10 px-5 mb-auto flex overflow-auto">
+    <div class="flex flex-col h-screen">
+      <header class="sticky top-0">
+        <%= render 'layouts/navbar' %>
+      </header>
+      <main class="container mt-10 px-5 mx-auto mb-auto">
         <%= yield %>
       </main>
-      <%= render 'layouts/footer' %>
+      <footer class="">
+        <%= render 'layouts/footer' %>
+      </footer>
     </div>
   </body>
 </html>

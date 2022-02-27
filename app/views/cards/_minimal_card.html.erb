@@ -1,0 +1,14 @@
+<div id="<%= dom_id card %>" class="card flex">
+  <div class="my-1">
+    <div class="inline-block">
+      <%= card.card_name %>
+      <%= card.issuer %>
+    </div>
+    <div class="inline-block right-0">
+      <% if action_name != "show" %>
+        <%= link_to "Show", card, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+        <%= link_to 'Edit', edit_card_path(card), class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+      <% end %>
+    </div>
+  </div>
+</div>
