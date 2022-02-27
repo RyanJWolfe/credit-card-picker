@@ -7,11 +7,12 @@
     <h1 class="font-bold text-4xl">Cards</h1>
     <%= link_to 'New card', new_card_path, class: "btn-purple-blue" %>
   </div>
-
-  <div id="cards" class="min-w-full">
+  <br class="mt-4">
+  <div id="cards" class="min-w-full card">
     <% if @cards.length > 0 %>
       <% @cards.each do |card| %>
         <%= render 'minimal_card', card: card %>
+        <hr class="mt-2">
       <% end %>
     <% else %>
       <p style="color: green">No pods were found</p>

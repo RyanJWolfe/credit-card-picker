@@ -1,7 +1,9 @@
-<div id="<%= dom_id card %>" class="card">
+<div id="<%= dom_id card %>">
   <div class="my-1 flex justify-between">
     <div class="content-start">
-      <%= card.card_name %>
+      <%= link_to card do %>
+        <%= card.card_name %>
+      <% end %>
       <br/>
       <div class="text-xs font-thin"><%= card.issuer %></div>
     </div>
