@@ -1,12 +1,17 @@
 <div id="<%= dom_id card %>" class="card">
   <p class="my-5">
+    <strong class="inline-block font-medium mb-1">Card name:</strong>
+    <%= card.card_name %>
+  </p>
+
+  <p class="my-5">
     <strong class="inline-block font-medium mb-1">Issuer:</strong>
     <%= card.issuer %>
   </p>
 
   <p class="my-5">
-    <strong class="inline-block font-medium mb-1">Card name:</strong>
-    <%= card.card_name %>
+    <strong class="inline-block font-medium mb-1">Network:</strong>
+    <%= card.network %>
   </p>
 
   <% if action_name != "show" %>

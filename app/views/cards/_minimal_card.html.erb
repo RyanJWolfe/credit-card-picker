@@ -5,7 +5,12 @@
         <%= card.card_name %>
       <% end %>
       <br/>
-      <div class="text-xs font-thin"><%= card.issuer %></div>
+      <div class="text-xs font-thin">
+        <%= card.issuer %>
+        <% if card.issuer != card.network %>
+          <%= card.network %>
+        <% end %>
+      </div>
     </div>
     <div class="content-end space-x-1">
       <% if action_name != "show" %>

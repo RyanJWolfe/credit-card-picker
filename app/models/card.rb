@@ -1,3 +1,7 @@
 class Card < ApplicationRecord
-  ISSUERS = ['Visa', 'Mastercard', 'Discover', 'American Express'].freeze
+  ISSUERS = ['American Express', 'Bank of America', 'Barclays', 'Capital One', 'Chase', 'Citi', 'Discover',
+             'Synchrony', 'U.S. Bank', 'Wells Fargo'].freeze
+  NETWORKS = ['American Express', 'Discover', 'Mastercard', 'Visa'].freeze
+
+  validates :card_name, :network, :issuer, presence: true
 end

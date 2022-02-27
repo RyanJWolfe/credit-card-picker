@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="my-5">
+    <%= form.label :network %>
+    <%= form.select :network, Card::NETWORKS, { prompt: "Select a card network" }, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
     <%= form.label :issuer %>
     <%= form.select :issuer, Card::ISSUERS, { prompt: "Select a card issuer" }, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
