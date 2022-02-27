@@ -1,13 +1,14 @@
-<div id="<%= dom_id card %>" class="card flex">
-  <div class="my-1">
-    <div class="inline-block">
+<div id="<%= dom_id card %>" class="card">
+  <div class="my-1 flex justify-between">
+    <div class="content-start">
       <%= card.card_name %>
-      <%= card.issuer %>
+      <br/>
+      <div class="text-xs font-thin"><%= card.issuer %></div>
     </div>
-    <div class="inline-block right-0">
+    <div class="content-end space-x-1">
       <% if action_name != "show" %>
-        <%= link_to "Show", card, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-        <%= link_to 'Edit', edit_card_path(card), class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+        <%= link_to "Show", card, class: "rounded-lg py-1 px-2 bg-gray-200" %>
+        <%= link_to 'Edit', edit_card_path(card), class: "rounded-lg py-1 px-2 bg-gray-200" %>
       <% end %>
     </div>
   </div>
